@@ -1,0 +1,253 @@
+<% include ./partials/header %> 
+
+
+       
+        <!-- Page Inner -->
+        <section class="image-bg lis-grediant grediant-tb">
+            <div class="background-image-maker"></div>
+            <div class="holder-image">
+                <img src="/images/bg1.jpg" alt="" class="img-fluid d-none">
+            </div>
+            <div class="container">
+                <div class="row justify-content-center pt-5">
+                 
+                </div>
+            </div>
+        </section>
+        <!--End Page Inner -->
+
+        <!-- Categories --> <section class="lis-grediant grediant-tb-white">
+        <div class="container">
+         <div class="row justify-content-center">
+        <div class="col-12 col-md-10 text-center"> 
+            <div class="heading pb-4">
+        <h2 class="f-weight-500">Find the Best Places</h2>   
+          </div> 
+         </div> 
+     </div>
+
+        <div class="row">  
+           <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp mb-4 mb-lg-0 text-center">
+            <a href="/business/hotel" class="text-white">
+        <div class="lis-categories lis-bg1 rounded lis-font-poppins "> 
+            <div class="text-white mb-2 h2">
+                <i class="icofont icofont-hotel-alt"></i>
+            </div> Hotel
+        
+     </div> 
+      </a>
+        </div>
+                    
+                   
+                    <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp mb-4 mb-sm-0 text-center">
+                        <a href="/business/eatries" class="text-white">
+                            <div class="lis-categories lis-bg4 rounded lis-font-poppins ">
+                                <div class="text-white mb-2 h2">
+                                    <i class="icofont icofont-fast-food"></i>
+                                </div>
+                                Eatries 
+                               
+                            </div> 
+                        </a>
+                    </div>
+                
+                    <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp text-center">
+                        <a href="/business/medical" class="text-white">
+                            <div class="lis-categories lis-bg6 rounded lis-font-poppins ">
+                                <div class="text-white mb-2 h2"><i class="icofont icofont-medical-sign-alt"></i></div>
+                                Medical
+                                
+                            </div> 
+                        </a>
+                    </div>
+                   
+                    <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp text-center">
+                        <a href="/business/school" class="text-white">
+                            <div class="lis-categories lis-bg2 rounded lis-font-poppins ">
+                                <div class="text-white mb-2 h2"><i class="icofont icofont-medical-sign-alt"></i></div>
+                                Schools
+                                
+                            </div> 
+                        </a>
+                    </div>
+                  
+                    <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp text-center">
+                        <a href="/business/mall" class="text-white">
+                            <div class="lis-categories lis-bg3 rounded lis-font-poppins ">
+                                <div class="text-white mb-2 h2"><i class="icofont icofont-medical-sign-alt"></i></div>
+                               Malls
+                                
+                            </div> 
+                        </a>
+                    </div>
+                 
+                    <div class="col-4 col-sm-2 col-lg-2 wow fadeInUp text-center">
+                        <a href="/business/others" class="text-white">
+                            <div class="lis-categories lis-bg4 rounded lis-font-poppins ">
+                                <div class="text-white mb-2 h2"><i class="icofont icofont-medical-sign-alt"></i></div>
+                                Others
+                                
+                            </div> 
+                        </a>
+                    </div>
+                 
+            
+              
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Categories -->
+
+        <div class="row">
+               
+          
+            <% if(business == undefined ) { %>    
+                <p>none</p>
+            <% } else{ %>
+                <% var Business = business.reverse() %>
+                <% Business.forEach(function(busn) { %>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 wow fadeInUp mb-4 list-wrapper">
+                        <div class="card lis-brd-light text-center text-lg-left list-item">
+                            <a href="/business/single/<%=busn._id%>">
+                                <div class="lis-grediant grediant-tb-light2 lis-relative modImage rounded-top"> <img style="width:100%; height:20rem;"   src="/image/<%=busn.business_image%>" alt="" class="img-fluid img-responsive rounded-top w-100" /> </div>
+                                                                                                        <%console.log(busn.business_image)%>
+                                <div class="lis-absolute lis-right-20 lis-top-20">
+                                    <div class="lis-post-meta border border-white text-white rounded lis-f-14"><%=busn.business_type%></div>
+                                </div>
+                            </a>
+                            <div class="card-body pt-0">
+                                 <div class="media d-block text-center  lis-relative"> <!--   <img src="image/<%=busn.business_logo%>" alt="" class="lis-mt-minus-15 img-fluid img-responsive  mx-auto mr-lg-3 mb-1 mb-lg-0 border lis-border-width-2 rounded-circle border-white" width="100" /> -->
+                                    <div class="media-body align-self-start mt-2">
+                                        <h6 class="mb-0 lis-font-weight-600"><A href="#" class="lis-dark"><%=busn.business_name%></A></h6> </div>
+                                </div>
+                                <ul class="list-unstyled my-2 lis-line-height-2 pr-0 text-center">
+                                    <li><i class="fa fa-phone pr-2"></i><%=busn.business_number%></li>
+                                    <li><i class="fa fa-map-o pr-2"></i><%=busn.business_location%> <A href="#" class="text-white"><i class="icofont icofont-travelling px-2 lis-bg5 py-2 lis-rounded-circle-50 lis-f-14"></i></A></li> 
+                                </ul>
+                                <div class="clearfix">
+                                    <!-- <div class="float-none  mb-3 mb-lg-0 mt-1">
+                                        <A href="#" class="text-white"><i class="icofont icofont-travelling px-2 lis-bg5 py-2 lis-rounded-circle-50 lis-f-14"></i></A>
+                                        </div> -->
+                                    <div class="float-none text-center mt-1">
+                                        
+                                        <A href="/business/single/<%=busn._id%>" class="lis-green-light text-white p-3 lis-rounded-circle-50 lis-f-14"></i>Read More</A> </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                        <% } %>
+                 
+                        <div id="pagination-container" class="col-md-12 text-center justify-content-center"></div>
+                     
+                               
+                                        
+                                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Sidebar -->
+       
+
+        
+        <!-- Call To Action -->
+        <section class="lis-bg-primary py-1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 text-center wow fadeInUp">
+                        <div class="heading">
+                            <h3 class="text-uppercase lis-line-height-1_5 text-white">Promoting Local Businesses</h3>
+                            <!-- <a href="#" class="btn btn-outline-light btn-default text-uppercase">Add Your Listing Here</a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--End Call To Action -->
+
+        
+
+        <!-- Top To Bottom-->
+        <a href="#" class="scrollup text-center lis-bg-primary lis-rounded-circle-50"> 
+            <div class="text-white mb-0 lis-line-height-1_7 h3"><i class="icofont icofont-long-arrow-up"></i></div>
+        </a>
+
+
+        <!-- End Top To Bottom-->
+
+        <!-- Login /Register Form-->
+        <div class="container">
+
+
+            <div id="modal" class="popupContainer" style="display: none;">
+                <header class="popupHeader">
+                    <span class="header_title">Login</span>
+                    <span class="modal_close"><i class="fa fa-times"></i></span>
+                </header>
+
+                <div class="popupBody">
+                    <!-- Social Login -->						
+
+                    <!-- Username & Password Login form -->
+                    <div class="user_login">
+                        <form method="POST" action="/login">
+
+                            <input type="text" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 " placeholder="username" name="username" />
+                            <br />
+
+
+                            <input type="password" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 " placeholder="password" name="password" />
+                            <br />
+
+                            
+                            <div class="action_btns">
+
+                                <button type="submit" href="#" class="btn btn-primary btn-default mt-3 w-100">Login</button>
+                            </div>
+                        </form>
+                        <br/>
+                        
+                        <hr/>
+                        Don't have an account <a href="#" class="register_form">Sign Up</a>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="user_register">
+                        <form method="POST" action="/register/now">
+
+                            <input type="text" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Username" name="username" />
+                            <br />
+
+                            <input type="password" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Password" name="password"/>
+                            <br />
+
+                            <div class="action_btns">
+                                
+                                <button type="submit" class="btn btn-primary btn-default mt-3 w-100">Register</button>
+                            </div>
+                        </form>
+                        <br/>
+                       
+                        <hr/>
+                        Already have an account <a href="#" class="login_form">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Login /Register Form-->
+
+
+
+        <!-- jQuery -->
+        <script src="/js/jquery.js"></script>
+        <script src="/js/plugins.min.js"></script>
+        <script src="/js/jquery.simplePagination.js"></script>
+        <script src="/js/common.js"></script>
+    </body>
+
+<!-- Mirrored from html.designstream.co.in/lister/rtl/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Oct 2019 06:07:16 GMT -->
+</html>

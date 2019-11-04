@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Directory</title>
+        <link rel="shortcut icon" href="/images/favicon.ico">
+        <!--Plugin CSS-->
+        <link href="/css/plugins.min.css" rel="stylesheet">
+
+        <!--main Css-->
+        <link href="/css/main.min.css" rel="stylesheet">
+        <!-- <link href="/css/simplePagination.css" rel="stylesheet"> -->
+    </head>
+    <body>
+         <!-- header -->
+         <div id="header-fix" class="header fixed-top transperant">
+                <nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-light py-lg-0 py-4">
+                  <a href="/a" class="navbar-brand mr-4 mr-md-5 text-white text-center" style="font-size:1rem; position: relative;  left: 3rem;"><b>Business Directory</b></a>    
+                 
+                    <div id="dl-menu" class="dl-menuwrapper d-block d-lg-none float-left">
+                        <button class="float-left">Open Menu</button>
+                        <ul class="dl-menu">
+    
+                            <li class="nav-item active ">
+                                <a class="nav-link" href="/" data-toggle="dropdown" aria-expanded="false">Home</a>
+                               
+                            </li>
+    
+                       
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Listing</a>
+                                <ul class="dl-submenu">                             
+                                    
+                                            <li class="dl-back"><a href="#">back</a></li>
+                                            <li><a href="listing-categories-style1.html">Category 1</a></li>
+                                            <li><a href="listing-categories-style2.html">Category 2</a></li>
+                                        
+                                    
+                                 
+                                </ul>
+                            </li> -->
+                          
+                            <%if(currentUser){ %>
+                                <li> <a href="/add" ><i class="fa fa-plus pr-1"></i> Add Listing</a></li>
+                                <li> <a href="/logout" ><i class="fa fa-plus pr-1"></i>Logout</a></li>
+                            <%} else { %>
+                                <li><a href="#modal" class="text-white login_form"><i class="fa fa-sign-in pr-2"></i> Sign In | Register</a></li>
+    
+                                
+                                <% }%>
+    
+                           
+                           
+    
+    
+    
+                        </ul>
+                    </div>
+    
+    
+                    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/"  aria-expanded="false">Home </a>
+                                
+                            </li>
+                                 <!-- <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" data-toggle="dropdown" aria-expanded="false">Pages <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu"><a tabindex="-1" href="#">Blog</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="blog-grid.html"> Blog Grid</a></li>
+                                            <li><a href="blog-listing.html"> Blog Listing</a></li>
+                                            <li><a href="blog-single.html"> Single Post</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html"> Contact</a></li>
+                                    <li><a href="user-profile.html"> User Profile</a></li>
+                                    <li><a href="faq.html"> Faq</a></li>
+                                    <li><a href="pricing.html"> Pricing Table</a></li>
+                                    <li><a href="coming-soon.html"> Coming Soon</a></li>
+                                    <li class="dropdown-submenu"><a tabindex="-1" href="#">404 Error</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="error-dark.html"> 404 Error Dark</a></li>
+                                            <li><a href="error-light.html"> 404 Error Light</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <ul class="list-unstyled my-2 my-lg-0">
+                            <li class="text-white mr-4"><i class="fa fa-sign-in pl-2"></i> <a href="#modal" class="text-white login_form">Sign In | Register</a></li>
+                        </ul>
+                        <a href="/add" class="btn btn-outline-light btn-sm mr-0 mr-lg-4 mt-3 mt-lg-0"><i class="fa fa-plus pr-1"></i> Add Listing</a>
+                    </div>
+                </nav>                    
+            </div>
+            <!--End header -->
+    

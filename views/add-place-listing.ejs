@@ -1,0 +1,271 @@
+<% include ./partials/header %> 
+      
+        <!-- Page Inner -->
+        <section class="lis-bg-light pb-5 lis-bg-dark">
+            <div class="container pt-5 ">
+                <div class="row wow fadeInUp">
+                    <div class="col-12 col-sm-6 ">
+                        <div class="page-title">
+                            <div class="text-center text-white">
+                                    <h2 class="text-white">Add new Business</h2>                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!--End Page Inner -->
+        <!-- Pricing -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9 mb-5 mb-lg-0">
+
+                        <div class="card lis-brd-light wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+                                <form id="apply" class="px-3" action="/submit" method="POST" enctype='multipart/form-data'>
+                            <div class="card-body p-0">
+                                <div class="row p-4">
+                                    <div class="col-12 col-sm-12 mb-3">
+                                        <h6 class="lis-font-weight-500"><i class="fa fa-tag pr-2 lis-f-14"></i>Business Type</h6>
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-2 col-form-label">Categories</label>
+                                            <div class="col-12 col-md-10">
+                                                <select name = "business_type" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" id="inlineFormCustomSelect">
+                                                    <option selected>Select Category</option>
+                                                    <option value="hotel">Hotel</option>
+                                                    <option value="eatries">Eatries</option>
+                                                    <option value="medical">Medical</option>
+                                                    <option value="school">School</option>
+                                                    <option value="mall">Mall</option>
+                                                    <option value="others">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                      
+
+                                    </div>
+
+                                </div>
+                                <hr/>
+
+                                <div class="row p-4">
+                                    <div class="col-12 col-sm-12 mb-3">
+                                        <h6 class="lis-font-weight-500"><i class="fa fa-align-left pr-2 lis-f-14"></i>  Name & Description </h6>
+
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-2 col-form-label">Title</label>
+                                            <div class="col-12 col-md-10">
+                                                <input class="form-control border-top-0 border-left-0 border-right-0 rounded-0" type="text" name="business_name" placeholder="business name" value="" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-2 col-form-label">Tagline</label>
+                                            <div class="col-12 col-md-10">
+                                                <input class="form-control border-top-0 border-left-0 border-right-0 rounded-0" type="text" name="business_tagline" placeholder="Say something catchy!" value="" id="example-text-input">
+                                            </div>
+                                        </div> -->
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-2 col-form-label">Description</label>
+                                            <div class="col-12 col-md-10">
+                                                <textarea name="business_descr" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="business description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <hr/>
+
+                                <div class="row p-4">
+                                    <div class="col-12 col-sm-12 mb-3">
+                                        <h6 class="lis-font-weight-500"><i class="fa fa-file-image-o pr-2 lis-f-14"></i> Images </h6>
+
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Logo</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_logo" type="file"  id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Cover Image</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_image" type="file"  id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Gallery Images(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_gallery1" type="file"  id="example-text-input1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Gallery Images(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_gallery2" type="file"  id="example-text-input2">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Gallery Images(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_gallery3" type="file"  id="example-text-input3">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Gallery Images(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input class="form-control border-0" name="business_gallery4" type="file"  id="example-text-input4">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <hr/>
+
+                                <div class="row p-4">
+                                    <div class="col-12 col-sm-12 mb-3">
+                                        <h6 class="lis-font-weight-500"><i class="fa fa-info-circle pr-2 lis-f-14"></i>  Contact information </h6>
+
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Email</label>
+                                            <div class="col-12 col-md-9">
+                                                <input name="business_email" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Your email address" type="text" value="" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Phone number(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input name="business_number" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" type="text" placeholder="Your phone number" value="" id="example-text-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-3 col-form-label">Website(optional)</label>
+                                            <div class="col-12 col-md-9">
+                                                <input name="business_website" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" type="text" placeholder="Your website address" value="" id="example-text-input">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr/>
+
+                                <div class="row p-4">
+                                    <div class="col-12 col-sm-12 mb-3">
+                                        <h6 class="lis-font-weight-500"><i class="fa fa-map-o pr-2 lis-f-14"></i>  Location </h6>
+
+                                    </div>
+                                    <div class="col-12 col-sm-12">
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-12 col-md-2 col-form-label">Address</label>
+                                            <div class="col-12 col-md-10">
+                                                <input name="business_location" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="e.g. 2438 Progress Way, Donnelly, MN, 56235" type="text" value=""  id="us2-address" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="col-12 col-sm-12 text-center"> <button type="submit" class="btn btn-primary btn-default mt-3"> Submit</button> </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+       
+        
+        <!-- Top To Bottom-->
+        <a href="#" class="scrollup text-center lis-bg-primary lis-rounded-circle-50">
+            <div class="text-white mb-0 lis-line-height-1_7 h3"><i class="icofont icofont-long-arrow-up"></i></div>
+        </a>
+        <!-- End Top To Bottom-->
+       
+
+ <!-- Login /Register Form-->
+ <div class="container">
+
+
+    <div id="modal" class="popupContainer" style="display: none;">
+        <header class="popupHeader">
+            <span class="header_title">Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+
+        <div class="popupBody">
+            <!-- Social Login -->						
+
+            <!-- Username & Password Login form -->
+            <div class="user_login">
+                <form method="POST" action="/login">
+
+                    <input type="text" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 " placeholder="username" name="username" />
+                    <br />
+
+
+                    <input type="password" class="form-control border-top-0 border-left-0 border-right-0 rounded-0 " placeholder="password" name="password" />
+                    <br />
+
+                    
+                    <div class="action_btns">
+
+                        <button type="submit" href="#" class="btn btn-primary btn-default mt-3 w-100">Login</button>
+                    </div>
+                </form>
+                <br/>
+                
+                <hr/>
+                Don't have an account <a href="#" class="register_form">Sign Up</a>
+            </div>
+
+            <!-- Register Form -->
+            <div class="user_register">
+                <form method="POST" action="/register/now">
+
+                    <input type="text" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Username" name="username" />
+                    <br />
+
+                    <input type="password" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Password" name="password"/>
+                    <br />
+
+                    <div class="action_btns">
+                        
+                        <button type="submit" class="btn btn-primary btn-default mt-3 w-100">Register</button>
+                    </div>
+                </form>
+                <br/>
+               
+                <hr/>
+                Already have an account <a href="#" class="login_form">Sign In</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Login /Register Form-->
+
+
+        <!-- jQuery -->
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjsIpyXFoB7_5_E2DgO_-CTDMHKM0cW4I&amp;sensor=false&amp;libraries=places"></script>
+        <script src="js/plugins.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/jquery.locationpicker.js"></script>
+        <script src="js/add-listing.js"></script>
+    </body>
+
+
+<!-- Mirrored from html.designstream.co.in/lister/rtl/add-place-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Oct 2019 06:19:35 GMT -->
+</html>
